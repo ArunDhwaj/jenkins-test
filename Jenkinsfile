@@ -18,6 +18,11 @@ dockerImage = docker.build registry + ":$BUILD_NUMBER"
 }
 }
 }
+stage('Initialize')
+{
+def dockerHome = tool 'mydocker'
+env.PATH = "${dockerHome}/bin:${env.PATH}"
+}  
 stage('Deploy our image') {
 steps{
 script {
