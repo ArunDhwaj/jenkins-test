@@ -1,3 +1,4 @@
+ #!/usr/bin/env
 pipeline {
 environment {
 def dockerHome = tool 'mydocker'
